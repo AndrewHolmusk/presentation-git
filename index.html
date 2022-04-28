@@ -1,40 +1,139 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/beige.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2 class="r-fit-text">Git & Github</h2>
+        <h2>正确食用方式</h2>
+        <p>Andrew.Huang</p>
+      </section>
+      <section data-markdown><textarea data-template>
+        ## 本次菜谱
+        1. Git
+        2. Github
+        3. 远程协作
+			</textarea></section>
+      <section data-markdown data-separator-vertical="^\n\n"><textarea data-template>
+        ## 什么是Git
+        
+
+        是一个版本控制工具
+        > 版本控制工具英文全称是Version Control System
+
+
+        ## Git日常操作
+        <video data-autoplay src="s1-video-git.webm"></video>
+        ---
+        ## 版本控制工具并不是独此一家
+
+
+        还存在其它的版本控制工具（[代码管理工具][1]）
+        - mercurial: GNU
+        - Subversion: Apache
+        - Fossil: Sqlite
+
+        [1]: <https://en.wikipedia.org/wiki/Version_control>
+
+
+        <p class="fragment fade-in-then-out">那为何偏爱Git?</p>
+        <p class="fragment fade-in-then-out">不仅仅是版本控制工具，还是<bold>分布式</bold>的</p>
+        <p class="fragment fade-up">分布式是Github这个平台得以通过使用Git存在的原因</p>
+        ---
+        ## Git辅助用工具
+
+
+        现代用的编辑器基本都是会支持Git的版本控制的
+
+
+        可以使用GUI工具帮助使用Git
+
+
+        可以使用命令行补全帮助记忆Git操作语义
+
+
+        此外，Git有插件支持，可以应对非文本类型的文件
+        > 一个例子:git-LFS
+      </textarea></section>
+      <section data-markdown data-separator-vertical="^\n\n"><textarea data-template>
+        ## Github 是一个平台
+        
+        使用Git作为底层的管理工具
+
+        
+        Github是一个代码分享平台
+        <p class="fragment fade-up">Github上面有着超多的自由代码，可以按需自行使用</p>
+        <p class="fragment fade-up">前提是要符合证书</p>
+        <p class="fragment fade-up">自由软件？往后稍稍...</p>
+        
+        
+        三个特征
+        <p class="fragment fade-up">代码</p>
+        <p class="fragment fade-up">分享</p>
+        <p class="fragment fade-up">同性交友</p>
+      </textarea></section>
+      <section data-markdown data-separator-vertical="^\n\n"><textarea data-template>
+        ## 远程协作
+
+
+        基于Git进行的代码协作
+        <p class="fragment fade-up">仓库管理</p>
+        <p class="fragment fade-up">权限管理</p>
+        <p class="fragment fade-up">提交管理</p>
+
+
+        CI: Continue Integration
+        <p class="fragment fade-up">自动化的管理</p>
+
+
+        CI流程
+        <p class="fragment fade-up">单元测试</p>
+        <p class="fragment fade-up">代码审核</p>
+        <p class="fragment fade-up">代码合并</p>
+        <p class="fragment fade-up">代码布署</p>
+        <p class="fragment fade-up">更大的测试...</p>
+        <p class="fragment fade-up">发布版本</p>
+      </textarea></section>
+      <section data-markdown data-separator-vertical="^\n\n"><textarea data-template>
+        # 结语
+
+        还有很多...
+      </textarea></section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      markdown: {
+        smartypants: true
+      },
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
